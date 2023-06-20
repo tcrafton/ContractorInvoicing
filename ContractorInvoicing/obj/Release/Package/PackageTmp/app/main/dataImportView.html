@@ -1,0 +1,45 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="col-lg-2">
+                    <label for="inputEntryDate">Invoice Date</label>
+                    <p class="input-group">
+                        <input type="text" class="form-control input-sm" uib-datepicker-popup="{{format}}" ng-model="vm.INVOICE_DATE" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default input-sm" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                </div>
+
+                <div class="form-group col-lg-3">
+                    <label for="inputPurity">Contractor</label>
+                    <select ng-model="vm.selectedCompany"
+                            class="form-control input-sm"
+                            ng-options="p.VENDOR_COMPANY as p.VENDOR_COMPANY for p in vm.companies"></select>
+                </div>
+
+                <div class="col-md-4">
+                    <br />
+                    <input type="file" name="file" class="form-control"
+                           onchange="angular.element(this).scope().UploadFile(this.files)" />
+                </div>
+                <div class="col-md-1">
+                    <br />
+                    <input type="button" value="Import" class="btn btn-success" ng-disabled="!SelectedFileForUpload || !vm.INVOICE_DATE || !vm.selectedCompany"
+                           ng-click="ParseExcelDataAndSave()" />
+                    <br />
+                    <span style="color:red">
+                        {{Message}}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row col-lg-12">
+            <h1>Contractor Invoice Data</h1>
+                <div style="height:30vw" ui-grid="vm.grid" ui-grid-exporter></div>
+        </div>
+    </div>
+</div>

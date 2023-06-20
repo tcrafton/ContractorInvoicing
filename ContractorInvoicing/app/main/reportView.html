@@ -1,0 +1,67 @@
+﻿<div class="row">
+    <div class="col-lg-10">
+
+        <div class="col-lg-2">
+            <label for="inputStartDate">Start Date</label>
+            <p class="input-group">
+                <input type="text" class="form-control input-sm" uib-datepicker-popup="{{format}}" ng-model="vm.startDate" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default input-sm" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+
+        <div class="col-lg-2">
+            <label for="inputStartDate">End Date</label>
+            <p class="input-group">
+                <input type="text" class="form-control input-sm" uib-datepicker-popup="{{format}}" ng-model="vm.endDate" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default input-sm" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+
+        <div class="form-group col-lg-3">
+            <label for="inputPurity">Contractor</label>
+            <select ng-model="vm.selectedCompany"
+                    class="form-control input-sm"
+                    ng-options="p.VENDOR_COMPANY as p.VENDOR_COMPANY for p in vm.companies"></select>
+        </div>
+
+        <div class="col-xs-2 col-md-1">
+            <br />
+            <button type="button" class="btn btn-primary form-control" ng-click="vm.update()">Update</button>
+        </div>
+
+        <div class="col-xs-2 col-md-1">
+            <br />
+            <button type="button" class="btn btn-success form-control" ng-click="vm.print()">Print</button>
+        </div>
+    </div>
+
+    <div class="col-lg-9">
+        <h3>Invoice - Gate Swipe Comparison</h3>
+        <table class="table table-bordered table-condensed" id="timeComparisonTable">
+            <thead>
+                <tr>
+                    <th>Shift Date</th>
+                    <th>Clock #</th>
+                    <th>Name</th>
+                    <th>Invoice Minutes</th>
+                    <th>Gate Swipe Minutes</th>
+                    <th>Difference</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in vm.comparisonData">
+                    <td>{{x.SHIFT_DATE}}</td>
+                    <td>{{x.CLOCK_NUM}}</td>
+                    <td>{{x.NAME}}</td>
+                    <td>{{x.INVOICE_MINUTES}}</td>
+                    <td>{{x.SWIPE_MINUTES}}</td>
+                    <td>{{x.INVOICE_MINUTES - x.SWIPE_MINUTES}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

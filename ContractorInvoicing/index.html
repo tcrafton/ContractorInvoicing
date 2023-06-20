@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Contractor Invoicing</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/contractorInvoicing/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheets -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/main-site.css" rel="stylesheet" />
+    <link href="Content/fontawesome/css/all.min.css" rel="stylesheet" />
+    <link href="Scripts/angular-xeditable-master/dist/css/xeditable.min.css" rel="stylesheet" />
+    <link href="Content/ui-grid.css" rel="stylesheet" />
+    <link href="Content/css/ui-grid.exporter.min.css" rel="stylesheet" />
+    <link href="Content/css/ui-grid.edit.min.css" rel="stylesheet" />
+
+    <!-- Library Scripts -->
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/lodash.min.js"></script>
+    <script src="scripts/angular.js"></script>
+    <script src="Scripts/angular-resource.js"></script>
+    <script src="Scripts/angular-sanitize.js"></script>
+    <script src="Scripts/ngStorage.js"></script>
+    <script src="scripts/angular-ui-router.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="Scripts/angular-ui/ui-utils.js"></script>
+    <script src="Scripts/angular-inview.js"></script>
+    <script src="Scripts/datetime-picker.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="Scripts/dirPagination.js"></script>
+    <script src="Scripts/angular-xeditable-master/dist/js/xeditable.min.js"></script>
+    <script src="Scripts/moment.js"></script>
+    <script src="Scripts/ZingChart/zingchart.min.js"></script>
+    <script src="Scripts/jsPDF/jspdf.min.js"></script>
+    <script src="Scripts/jsPDF/jsPdf.plugins/from_html.js"></script>
+    <script src="Scripts/jsPDF/jsPdf.plugins/split_text_to_size.js"></script>
+    <script src="Scripts/jsPDF/jsPdf.plugins/standard_fonts_metrics.js"></script>
+    <script src="Scripts/jsPDF/jsPdf.plugins/png.js"></script>
+    <script src="Scripts/jsPDF/jsPdf.plugins/zlib.js"></script>
+    <script src="Scripts/jsPDF/jsPdf.plugins/png_support.js"></script>
+    <script src="Scripts/jsPDF/jsPdf.plugins/addimage.js"></script>
+    <script src="Scripts/jsPDF/jsPdf.plugins/total_pages.js"></script>
+    <script src="Scripts/jsPDF/jsPdf.plugins/jspdf.plugin.autotable.min.js"></script>
+    <script src="Scripts/jszip.min.js"></script>
+    <script src="Scripts/toastr.min.js"></script>
+    <script src="Scripts/spin.min.js"></script>
+    <script src="Scripts/angular-spinner.min.js"></script>
+    <script src="Scripts/angular-loading-spinner.js"></script>
+    <script src="Scripts/alasql.min.js"></script>
+    <script src="Scripts/ui-grid.min.js"></script>
+    <script src="Scripts/xlsx.full.min.js"></script>
+    <script src="Scripts/excel-builder.js"></script>
+
+    <!-- Application Script -->
+    <script src="app/app.js"></script>
+    <script src="app/dataFactory.js"></script>
+
+    <!-- Services -->
+    <script src="app/services/common.services.js"></script>
+
+    <!-- Controllers -->
+    <script src="app/mainCtrl.js"></script>
+    <script src="app/main/reviewCtrl.js"></script>
+    <script src="app/login/loginCtrl.js"></script>
+    <script src="app/main/dataImportCtrl.js"></script>
+    <script src="app/main/reportCtrl.js"></script>
+
+
+</head>
+
+<body ng-app="contractorInvoiceApp">
+
+    <!--<div class="wrapper col1">
+        <div id="topbar">
+            <br class="clear" />
+        </div>
+    </div>-->
+
+    <div class="wrapper col2">
+        <div id="header">
+            <div id="logo">
+                <table style="border-color: white">
+                    <tr style="border-color: white">
+
+                        <td style="border-color: white">
+                            <a href="http://www.magnitude7metals.com/">
+                                <img src="images/logo.png" alt="" width="350px" height="100px"/>
+                            </a>
+                        </td>
+                        <td style="border-color: white">
+                            <p style="font-family: 'Times New Roman', Times, serif; font-size: 32px; height: 17px; width: 645px; position: absolute; bottom: 50px; text-align: right;">
+                                <strong>
+                                    Contractor Invoicing
+                                </strong>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <br class="clear" />
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <span us-spinner="{radius:30, width:8, length: 16}" class ="spinner"></span>
+        <div ui-view></div>
+    </div>
+</body>
+</html>

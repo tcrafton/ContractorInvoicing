@@ -1,0 +1,12 @@
+﻿<div>
+    <div class="row">
+        <div class="col-sm-11">
+            <uib-tabset active="vm.activeTab">
+                <uib-tab ng-repeat="tab in vm.tabs" heading="{{tab.text}}" ui-sref="{{tab.state}}" active="{{tab.active}}"></uib-tab>
+            </uib-tabset>
+        </div>
+    </div>
+
+
+    <div ui-view="tabContent" id="tabContent" class="admin-content" ng-class="{{vm.tabs[vm.activeTab]}}"></div>
+</div>

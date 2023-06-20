@@ -1,0 +1,52 @@
+﻿<div class="row">
+    <div class="col-lg-10">
+
+        <div class="col-lg-2">
+            <label for="inputStartDate">Start Date</label>
+            <p class="input-group">
+                <input type="text" class="form-control input-sm" uib-datepicker-popup="{{format}}" ng-model="vm.startDate" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default input-sm" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+
+        <div class="col-lg-2">
+            <label for="inputStartDate">End Date</label>
+            <p class="input-group">
+                <input type="text" class="form-control input-sm" uib-datepicker-popup="{{format}}" ng-model="vm.endDate" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default input-sm" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+
+        <div class="col-xs-2 col-md-1">
+            <br />
+            <button type="button" class="btn btn-primary form-control" ng-click="vm.update()">Update</button>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <table class="table table-bordered table-condensed">
+            <thead>
+                <tr>
+                    <th>Invoice Date</th>
+                    <th>Contractor</th>
+                    <th>Total Hours</th>
+                    <th>Total Entries</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in vm.invoices">
+                    <td>{{x.INVOICE_DATE | date: 'MM/dd/yyyy'}}</td>
+                    <td>{{x.CONTRACTOR}}</td>
+                    <td>{{x.TOTAL_HOURS_WORKED}}</td>
+                    <td>{{x.TOTAL_ENTRIES}}</td>
+                    <td><button class="btn btn-danger" ng-click="vm.removeInvoice(x.INVOICE_DATE, x.CONTRACTOR)">remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

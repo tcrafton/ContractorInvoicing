@@ -53,7 +53,7 @@
                             HOURS_WORKED: d['Hours Worked (Decimal)'],
                             DESCRIPTION_OF_WORK: d['Description of Work'],
                             RATE: +(d[' Rate '].replace('$', '')),
-                            TOTAL: +(d['Total '].replace('$', '')),
+                            TOTAL: +(d['Total '].replace('$', '').replace(',', '')),
                             NON_WORK_CHARGE: d['Non Worked Charges'] === 'X' ? 1 : 0,
                             CONTRACTOR: vm.selectedCompany
                         });

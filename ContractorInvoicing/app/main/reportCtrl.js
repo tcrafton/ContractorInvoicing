@@ -71,6 +71,7 @@
                                 vm.hoursWorked.push({
                                     ENTRYDATE: swipesByPerson[p][i - 1] ? swipesByPerson[p][i - 1].ENTRYDATE : '',
                                     SHIFTDATE: swipesByPerson[p][i - 1] ? new Date(swipesByPerson[p][i - 1].ENTRYDATE).toLocaleDateString() : '',
+                                    EMPLOYEEID: swipesByPerson[p][i].EMPLOYEEID,
                                     FIRST_NAME: swipesByPerson[p][i].FIRST_NAME,
                                     LAST_NAME: swipesByPerson[p][i].LAST_NAME,
                                     NAME: swipesByPerson[p][i].NAME,
@@ -123,9 +124,15 @@
             let timeComparison = [];
             invoices.forEach((entry) => {
                 let currentRecord = {};
+                //let swipeRecord = swipes.filter((swipe) => {
+                //    console.log(swipe);
+                //    return Date.parse(swipe.SHIFTDATE) === Date.parse(entry.SHIFTDATE) && swipe.NAME.toLowerCase() === entry.NAME.toLowerCase();
+                //})[0];
+
                 let swipeRecord = swipes.filter((swipe) => {
-                    return Date.parse(swipe.SHIFTDATE) === Date.parse(entry.SHIFTDATE) && swipe.NAME === entry.NAME;
+                    return Date.parse(swipe.SHIFTDATE) === Date.parse(entry.SHIFTDATE) && swipe.EMPLOYEEID.toLowerCase() === entry.CLOCK_NUM.toLowerCase();
                 })[0];
+
                 currentRecord.SHIFT_DATE = entry.SHIFTDATE;
                 currentRecord.CLOCK_NUM = entry.CLOCK_NUM;
                 currentRecord.NAME = entry.NAME;

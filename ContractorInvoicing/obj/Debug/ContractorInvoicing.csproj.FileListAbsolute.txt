@@ -63,3 +63,4 @@ P:\IS\SourceCode\VisualStudio2017\ContractorInvoicing\ContractorInvoicing\obj\De
 P:\IS\SourceCode\VisualStudio2017\ContractorInvoicing\ContractorInvoicing\obj\Debug\ContractorInvoicing.csproj.CopyComplete
 P:\IS\SourceCode\VisualStudio2017\ContractorInvoicing\ContractorInvoicing\obj\Debug\ContractorInvoicing.dll
 P:\IS\SourceCode\VisualStudio2017\ContractorInvoicing\ContractorInvoicing\obj\Debug\ContractorInvoicing.pdb
+P:\IS\SourceCode\VisualStudio2017\ContractorInvoicing\ContractorInvoicing\obj\Debug\ContractorInvoicing.csprojAssemblyReference.cache

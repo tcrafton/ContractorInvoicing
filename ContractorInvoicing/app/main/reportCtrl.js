@@ -220,6 +220,37 @@
             doc.save('GateSwipeInvoiceComparison.pdf');
         }
 
+        $scope.exportData = function () {
+            if (!vm.startDate || !vm.endDate || !vm.selectedCompany) {
+                toastr.info("Please enter Start Date, End Date and Contractor");
+                return;
+            }
+
+            if (!vm.comparisonData) {
+                toastr.info("No data to export");
+                return;
+            }
+
+            let dataToExport = [];
+            vm.comparisonData.forEach((entry) => {
+                let swipe = {
+                    'SHIFT DATE': entry.SHIFT_DATE,
+                    'Clock #': entry.CLOCK_NUM,
+                    'NAME': entry.NAME,
+                    'INVOICE MINUTES': entry.INVOICE_MINUTES,
+                    'GATE SWIPE MINUTES': entry.SWIPE_MINUTES,
+                    'DIFFERENCE': entry.INVOICE_MINUTES - entry.SWIPE_MINUTES
+                };
+                dataToExport.push(swipe);
+            });
+
+            const worksheet = XLSX.utils.json_to_sheet(dataToExport, { cellDates: true, dateNF: 'M/D/YYYY' });
+
+            const workbook = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(workbook, worksheet, "Contractor Invoicing Check");
+            XLSX.writeFile(workbook, "ContractorInvoicingCheck.xlsx", { compression: true });
+        };
+
         // Calender 
         $scope.today = function () {
             $scope.dt = new Date();

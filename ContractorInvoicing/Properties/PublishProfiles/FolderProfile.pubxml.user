@@ -10,7 +10,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="app/app.js">
-      <publishTime>06/20/2023 08:56:43</publishTime>
+      <publishTime>07/18/2023 11:54:01</publishTime>
     </File>
     <File Include="app/dataFactory.js">
       <publishTime>06/20/2023 08:56:29</publishTime>
@@ -31,10 +31,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/19/2023 13:38:53</publishTime>
     </File>
     <File Include="app/main/reportCtrl.js">
-      <publishTime>07/18/2023 07:35:32</publishTime>
+      <publishTime>07/18/2023 12:48:07</publishTime>
     </File>
     <File Include="app/main/reportView.html">
-      <publishTime>06/20/2023 08:48:26</publishTime>
+      <publishTime>07/18/2023 11:48:52</publishTime>
     </File>
     <File Include="app/main/reviewCtrl.js">
       <publishTime>06/20/2023 08:47:54</publishTime>
@@ -55,10 +55,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/ContractorInvoicing.dll">
-      <publishTime>07/18/2023 08:33:07</publishTime>
+      <publishTime>07/18/2023 12:49:25</publishTime>
     </File>
     <File Include="bin/ContractorInvoicing.pdb">
-      <publishTime>07/18/2023 08:33:07</publishTime>
+      <publishTime>07/18/2023 12:49:25</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.TelemetryCorrelation.dll">
       <publishTime>06/28/2017 15:05:26</publishTime>
@@ -5311,7 +5311,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/07/2023 09:18:52</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>06/20/2023 09:10:08</publishTime>
+      <publishTime>07/18/2023 11:53:27</publishTime>
     </File>
     <File Include="Scripts/.gitattributes">
       <publishTime>06/07/2023 09:18:52</publishTime>
@@ -6454,7 +6454,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/19/2023 12:47:45</publishTime>
     </File>
     <File Include="Scripts/xlsx.full.min.js">
-      <publishTime>06/07/2023 10:04:09</publishTime>
+      <publishTime>07/18/2023 12:02:15</publishTime>
     </File>
     <File Include="Scripts/xlsx.js">
       <publishTime>06/07/2023 09:19:00</publishTime>
